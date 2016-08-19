@@ -12,8 +12,9 @@ $(document).ready(function(){
         dataParant = clickedItem.data('parent');
         alert(dataParant);
         if(dataParant == 'E' || dataParant == 'I') {
-            $('.letter-click').not('[data-parent^="'+dataParant+'"]').hide();
-
+         //   $('.letter-click').not('[data-parent^="'+dataParant+'"]').hide();
+         imageUrl = 'assets/img/i-grey.png';
+           $ ('[data-parent="'+dataParant+'"]').css("background-image", 'url(' + imageUrl + ')');
          //   $("a:not([rel=facebox],[href^=mailto])");
         }
     }
