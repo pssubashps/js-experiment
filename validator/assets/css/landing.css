@@ -113,6 +113,20 @@
 .wylet{ color:#ae8bb3}
 .green{ color:#c8dc45}
 .page01{ text-align:right; font-size:30px; color:#868686; padding-right:140px; margin-bottom:20px; margin-top:20px;}
+
+.box1 h1{ color:#b5121b; font-size:50px;}
+.box1 .head h2{color:#FFF; font-size:30px; background:#818285; border-radius:10px; float:left; padding:15px 25px;}
+.box1 .head{ width:100%;}
+.box1 .list01 li{ background:url(../img/arrow.png) 0px 5px no-repeat; padding:0 0 10px 20px;}
+.box1 .list01 li a{ font-size:24px; color:#818285;}
+
+.middle{ padding:0 25px;}
+.clr-yellow{ background:#fbb255; padding:40px 10px;}
+.clr-gree{ background:#80b67e; padding:40px 10px;}
+.clr-blue{ background:#5fa4d9; padding:40px 10px;}
+.clr-purple{ background:#b584bb; padding:40px 10px;}
+.clr-gree a, .clr-yellow a, .clr-blue a, .clr-purple a{ font-size:85px; color:#FFF; line-height:85px; padding:0px 6px;}
+
  /*responsive*/
 
  @media (min-width: 991px) {

@@ -1,0 +1,42 @@
+{
+    "their": {
+        "h1": [
+            {
+                "li": [
+                    "Seeking to bring order to the world",
+                    "Being goal-oriented and decisive",
+                    "Testing the logic of a system through challenge and critique",
+                    "Taking charge"
+                ],
+                "title": "What they like"
+            },
+            {
+                "li": [
+                    "An organised and effcient process; if you spend too long exploring possibilities they may get frustrated",
+                    "Accuracy - so make sure your facts are correct and don't be too vague or conceptual"
+                ],
+                "title": "What they want"
+            }
+        ]
+    },
+    "yours": {
+        "h1": [
+            {
+                "li": [
+                    "Seeking to bring order to the world",
+                    "Being goal-oriented and decisive",
+                    "Testing the logic of a system through challenge and critique",
+                    "Taking charge"
+                ],
+                "title": "What you like"
+            },
+            {
+                "li": [
+                    "Organisation and planning for every activity",
+                    "You may spot mistakes others may overlook"
+                ],
+                "title": "What you give"
+            }
+        ]
+    }
+}
