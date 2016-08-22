@@ -13,11 +13,11 @@ $(document).ready(function () {
 
     $('a').on("click", function () {
         if (typeof $(this).data('parent') === "undefined") {
-           disableChilds($(this).parent());
-        }else{
+            disableChilds($(this).parent());
+        } else {
             disableChilds($(this));
         }
-        
+
     });
     //need to do foreach loop
     function disableChilds(clickedItem) {
@@ -49,10 +49,10 @@ $(document).ready(function () {
             fourthLevelClick(clickedItem);
         }
         $("#selected-pattern").text(selectedArray[selectedArray.length - 1]);
-        if(selectedArray.length == 4) {
-            if(confirm("Your selected pattern is "+selectedArray[selectedArray.length - 1]+ " Do you want to continue ?")) {
+        if (selectedArray.length == 4) {
+            if (confirm("Your selected pattern is " + selectedArray[selectedArray.length - 1] + " Do you want to continue ?")) {
                 loadPatternSelectedPage();
-            }else{
+            } else {
                 location.reload();
             }
         }
@@ -227,25 +227,38 @@ $(document).ready(function () {
     }
 
     // Pattern selected page handlers
-    function loadPatternSelectedPage () {
-        $.get('template/pageload.html',function (data){
+    function loadPatternSelectedPage() {
+        $.get('template/pageload.html', function (data) {
             $("#page_container").html(data);
         });
     }
-     $('body').on("click","#their",function () {
-        loadData("their",$(this));
-    });
-    
-     $('body').on("click","#yours",function () {
-        loadData("yours",$(this));
+    $('body').on("click", "#their", function () {
+        loadData("their", $(this));
+        $('.card').toggleClass('flipped');
     });
 
-    function loadData(who,evt) {
-        page = "template/"+selectedArray[3]+".json";
-        $.get(page,function (data) {  
-            console.log(data);
-            title = '<div class="head cf"><h2>'+data[who].h1[0].title+'</h2></div>';
-            evt.after(title);
+    $('body').on("click", "#yours", function () {
+        loadData("yours", $(this));
+         $('.card2').toggleClass('flipped');
+    });
+
+    function loadData(who, evt) {
+        page = "template/" + selectedArray[3] + ".json";
+        $.get(page, function (data) {
+            var appendDataString = '';
+            $.each(data[who].h1, function (index, value) {
+                title = '<div class="head cf"><h2>' + value.title + '</h2></div>';
+                var liAppendString = '  <ul class="unstyle-list list01">';
+                 $.each(value.li, function (liIndex, liVal) {
+                     liAppendString += ' <li><a href="#">'+liVal+'</a></li>'
+                 });
+                  liAppendString += ' </ul>';
+               appendDataString += title;
+               appendDataString += liAppendString;
+            });
+            
+            $('#'+who+'_back').contents(':not(h1)').remove();
+            $('#'+who+'_back').append(appendDataString);
         });
     }
 });
