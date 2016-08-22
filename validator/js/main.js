@@ -8,13 +8,16 @@ $(document).ready(function () {
     var selectedArray = [];
     $('.letter-click').on("click", function () {
         //alert($(this).data('parent'));
+        $(this).addClass('css3-animate');
         disableChilds($(this));
     });
 
     $('a').on("click", function () {
         if (typeof $(this).data('parent') === "undefined") {
+            $(this).parent().addClass('css3-animate');
             disableChilds($(this).parent());
         } else {
+             $(this).addClass('css3-animate');
             disableChilds($(this));
         }
 
@@ -241,14 +244,18 @@ $(document).ready(function () {
         loadData("yours", $(this));
          $('.card2').toggleClass('flipped');
     });
-
+     $('body').on("click", ".head", function () {
+        alert("test");
+        console.log( $(this).children(":nth-child(2)"));
+        $(this).next("ul").toggle();
+     });
     function loadData(who, evt) {
         page = "template/" + selectedArray[3] + ".json";
         $.get(page, function (data) {
             var appendDataString = '';
             $.each(data[who].h1, function (index, value) {
                 title = '<div class="head cf"><h2>' + value.title + '</h2></div>';
-                var liAppendString = '  <ul class="unstyle-list list01">';
+                var liAppendString = '  <ul class="unstyle-list list01" style="display:none;">';
                  $.each(value.li, function (liIndex, liVal) {
                      liAppendString += ' <li><a href="#">'+liVal+'</a></li>'
                  });
