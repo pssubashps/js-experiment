@@ -16,6 +16,20 @@
                     "Accuracy - so make sure your facts are correct and don't be too vague or conceptual"
                 ],
                 "title": "What they want"
+            },
+             {
+                "li": [
+                    "Structure and order in the workplace",
+                    "A drive for efficient processes, which enables you to make cost savings and quality improvements"
+                ],
+                "title": "Strengths"
+            },
+            {
+                "li": [
+                    "Insensitivity to people issues – remember to factor them in",
+                    "A lack of tolerance of people who are  less organised and efficient than you – try to value their flexibility and spontaneity"
+                ],
+                "title": "Blind spots"
             }
         ]
     },
@@ -36,6 +50,19 @@
                     "You may spot mistakes others may overlook"
                 ],
                 "title": "What you give"
+            }, {
+                "li": [
+                    "Working with you efficiently and telling you what is working and what  is not",
+                    "Providing clarity about plans,  organisation and structure"
+                ],
+                "title": "Strengths"
+            },
+            {
+                "li": [
+                    "Frustration with people who spend  a lot of time exploring possibilities or options",
+                    "Impatience or an impersonal manner –  so don’t take that personally"
+                ],
+                "title": "Blind spots"
             }
         ]
     }
