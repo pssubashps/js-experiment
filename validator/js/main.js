@@ -7,13 +7,22 @@ $(document).ready(function () {
 
     var selectedArray = [];
     $('.letter-click').on("click", function () {
-        //alert($(this).data('parent'));
+         var bg = $(this).css('background-image');
+       
+        if (bg.indexOf("grey") > 0) {
+            return false;
+        }
         $(this).addClass('css3-animate');
         disableChilds($(this));
     });
 
     $('a').on("click", function () {
         if (typeof $(this).data('parent') === "undefined") {
+             var bg = $(this).parent().css('background-image');
+       
+        if (bg.indexOf("grey") > 0) {
+            return false;
+        }
             $(this).parent().addClass('css3-animate');
             disableChilds($(this).parent());
         } else {
@@ -231,9 +240,7 @@ $(document).ready(function () {
 
     // Pattern selected page handlers
     function loadPatternSelectedPage() {
-        $.get('template/pageload.html', function (data) {
-            $("#page_container").html(data);
-        });
+        $(location).attr('href', 'page2.html?p='+selectedArray[3])
     }
     $('body').on("click", "#their", function () {
         loadData("their", $(this));
@@ -245,9 +252,9 @@ $(document).ready(function () {
          $('.card2').toggleClass('flipped');
     });
      $('body').on("click", ".head", function () {
-        alert("test");
+       // alert("test");
         console.log( $(this).children(":nth-child(2)"));
-        $(this).next("ul").toggle();
+        $(this).next("ul").slideToggle('slow','swing');;
      });
     function loadData(who, evt) {
         page = "template/" + selectedArray[3] + ".json";

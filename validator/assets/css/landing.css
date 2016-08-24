@@ -126,7 +126,25 @@
 .clr-blue{ background:#5fa4d9; padding:40px 10px;}
 .clr-purple{ background:#b584bb; padding:40px 10px;}
 .clr-gree a, .clr-yellow a, .clr-blue a, .clr-purple a{ font-size:85px; color:#FFF; line-height:85px; padding:0px 6px;}
+.btn-wrap{ padding-bottom:50px;}
+.radio{ font-size:30px; color:#b5121b; font-weight:bold;}
 
+.main-box{ width:100%; min-height:500px; height:auto; position:relative;}
+.main-box a{ font-size:24px; color:#FFF; background:#818285; padding:15px 25px; border-radius:10px;}
+.link01{ position:absolute; top:0; left:0;}
+.link02{ position:absolute; top:0; right:0;}
+.link03{ position:absolute; bottom:0; left:0;}
+.link04{ position:absolute; bottom:0; right:0;}
+
+.contents{ width:600px; margin:auto; padding:50px; background:#eee;}
+.contents h2{
+    color: #b5121b;
+    font-size: 30px;
+    font-weight: bold;
+	text-transform:uppercase;
+	text-align:center;
+}
+.contents p{ font-size:20px;}
  /*responsive*/
 
  @media (min-width: 991px) {
