@@ -109,18 +109,24 @@ $(document).ready(function () {
         data = pageData[qParams['p']];
         var appendDataString = '';
 
-        var liAppendString = '  <ul class="" >';
+        var liAppendString = '  <ul class="unstyle-list list02" >';
         $.each(data[who].h1[heading].li, function (liIndex, liVal) {
             liAppendString += ' <li><a href="#">' + liVal + '</a></li>'
         });
         liAppendString += ' </ul>';
         // $('#' + who + '_back').contents(':not(h1)').remove();
         $('.contents').html(liAppendString);
-        $('.contents').addClass('animated bounceInUp');
+        $('.contents').addClass('animated rotateIn');
+        removeAnimationClass();
     }
     $('.contents').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
-        $('.contents').removeClass('animated bounceInUp');
+        $('.contents').removeClass('animated rotateIn');
     });
+    function removeAnimationClass() {
+        $('.contents').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+            $('.contents').removeClass('animated rotateIn');
+        });
+    }
     function getUrlVars() {
         var vars = [], hash;
         var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
