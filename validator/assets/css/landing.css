@@ -131,12 +131,12 @@
 
 .main-box{ width:100%;}
 .main-box a{ font-size:24px; color:#FFF; background:#818285; padding:15px 25px; border-radius:10px;}
-.link01{ position:absolute; top:-54px; left:-192px;}
-.link02{ position:absolute; top:-54px; right:-210px;}
-.link03{ position:absolute; bottom:-55px; left:-134px;}
-.link04{ position:absolute; bottom:-55px; right:-152px;}
+.link01{ position:absolute; top:-7px; left:-140px;}
+.link02{ position:absolute; top:-7px; right:-246px;}
+.link03{ position:absolute; bottom:0px; left:-83px;}
+.link04{ position:absolute; bottom:-7px; right:-192px;}
 
-.contents{ width:800px; padding:50px; background:#eee; margin:auto; position:relative;}
+.contents{ width:800px; padding:50px;  margin:auto; position:relative;}
 .contents h2{
     color: #b5121b;
     font-size: 30px;
@@ -151,6 +151,9 @@
 .color2{ background:#80b67e; color:#FFF; padding:10px;}
 .color3{ background:#5fa4d9; color:#FFF; padding:10px;}
 .color4{ background:#b584bb; color:#FFF; padding:10px;}
+.inner-contents {background:#eee;}
+.inner-contents p{ font-size:20px;}
+.inner-contents{ width:800px; padding:50px;  margin:auto; position:relative;}
  /*responsive*/
 
  @media (min-width: 991px) {
