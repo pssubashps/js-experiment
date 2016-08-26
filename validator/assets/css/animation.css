@@ -1,10 +1,8 @@
 .flip {
   -webkit-perspective: 800;
   -moz-perspective: 1560;
-   width: 400px;
    height: 200px;
     position: relative;
-    margin: 50px auto;
 }
 .flip .card.flipped  {
   -webkit-transform: rotatex(-180deg);
@@ -47,10 +45,8 @@
 .flip2 {
   -webkit-perspective: 800;
   -moz-perspective: 1560;
-   width: 400px;
    height: 200px;
     position: relative;
-    margin: 50px auto;
 }
 .flip2 .card2.flipped  {
   -webkit-transform: rotatex(-180deg);
