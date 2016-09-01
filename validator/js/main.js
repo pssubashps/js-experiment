@@ -102,8 +102,10 @@ $(document).ready(function () {
                     }
                     if (l == 7) {
                         $(this).children().css("color", '#b3b0b3');
+                         $(this).css('cursor','not-allowed');
                     } else {
                         $(this).css("background-image", 'url(' + imageUrl + ')');
+                         $(this).children('a').css('cursor','not-allowed');
                     }
                 }
 
@@ -144,8 +146,10 @@ $(document).ready(function () {
                     }
                     if (l == 7) {
                         $(this).children().css("color", '#b3b0b3');
+                         $(this).css('cursor','not-allowed');
                     } else {
                         $(this).css("background-image", 'url(' + imageUrl + ')');
+                         $(this).children('a').css('cursor','not-allowed');
                     }
                 }
 
@@ -186,8 +190,10 @@ $(document).ready(function () {
                     }
                     if (l == 7) {
                         $(this).children().css("color", '#b3b0b3');
+                         $(this).css('cursor','not-allowed');
                     } else {
                         $(this).css("background-image", 'url(' + imageUrl + ')');
+                         $(this).children('a').css('cursor','not-allowed');
                     }
                 }
 
@@ -203,7 +209,8 @@ $(document).ready(function () {
         if (selectedArray.length > 0) {
             return false;
         }
-
+      //  clickedItem.children('a').attr('disabled',true);
+        
         dataParant = clickedItem.data('parent');
         dataParantLength = dataParant.length;
         //  alert(dataParantLength);
@@ -226,7 +233,10 @@ $(document).ready(function () {
                     }
                     if (l == 7) {
                         $(this).children().css("color", '#b3b0b3');
+                        $(this).css('cursor','not-allowed');
+                        
                     } else {
+                         $(this).children('a').css('cursor','not-allowed');
                         $(this).css("background-image", 'url(' + imageUrl + ')');
                     }
                 }
